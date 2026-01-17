@@ -6,6 +6,11 @@ body{
     padding-right: 40px;
     font-family: "Montserrat", sans-serif;
  }
+
+ ul,ol{
+    margin-top: 0;
+    margin-bottom: 0;
+ }
  .wrapper{
     background: #fff;
     display: flex;
@@ -18,6 +23,8 @@ body{
     padding-right: 40px;
     padding-bottom: 80px;
     box-sizing: border-box;
+    width: 1200px;
+    margin: 0 auto;
  }
  
 .Saidebar{
@@ -37,7 +44,160 @@ box-sizing: border-box;
 color: #161d2a;
 font-size: 22px;
 line-height: 1.71429;
-font-weight: 400;
+font-weight: 700;
 margin-bottom: 8px;
 }
+.contact-linke{
+font-weight: 700;
+font-size: 14px;
 
+/* line-height: 24px; */ 
+line-height: 1.71429;
+color: #2979ff;
+}
+.contact-item{
+margin-top: 0;
+margin-bottom: 4px;
+}
+.contact-container{
+margin-bottom: 40px;  
+}
+.skills-container{
+    margin-bottom: 40px;
+}
+.tech-skills{
+margin-bottom: 8px;
+font-weight: 700;
+font-size: 22px;
+color: #161d2a;
+}
+.skills-list{
+padding-left: 16px;
+}
+.skills-list-item{
+font-weight: 400;
+font-size: 14px;
+
+/* line-height: 24px; */ 
+line-height: 1.71429;
+color: #161d2a;
+}
+.soft-container{
+margin-bottom: 40px;
+}
+.soft-skills{
+margin-bottom: 8px;
+font-weight: 700;
+font-size: 22px;
+color: #161d2a;
+}
+.soft-list{
+    padding-left: 16px;
+}
+.soft-list-item{
+font-weight: 400;
+font-size: 14px; 
+/* line-height: 24px; */ 
+line-height: 1.71429;
+color: #161d2a;
+}
+.my-profession{
+color: #000;
+font-size: 14px;
+font-weight: 700;
+line-height: 17px;
+margin-top: 0;
+margin-bottom: 8px;
+}
+.my-name{
+color: #000;
+font-size: 45px;
+font-weight: 700;
+line-height: 55px;
+margin-top: 0;
+margin-bottom: 12px;
+}
+.my-dskr{
+color: #595959;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+}
+.my-info{
+margin-bottom: 40px;
+}
+.my-projects-title{
+color: #000;
+font-size: 22px;
+font-weight: 700;
+line-height: 27px;
+margin-top: 0;
+margin-bottom: 8px;
+}
+.my-projects-list{
+padding-left: 16px;
+}
+.my-projects-item{
+ color: #000;
+ font-size: 14px;
+ font-weight: 700;
+ line-height: 24px; 
+}
+.my-projects-item-linke{
+color: #005fff;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+text-decoration-line: underline;
+}
+.my-projects-item-tech{
+color: #595959;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+}
+.my-projects-container{
+margin-bottom: 40px;
+}
+.work-expiriennce-title{
+color: #000;
+font-size: 22px;
+font-weight: 700;
+line-height: 27px;
+margin-top: 0;
+margin-bottom: 8px;
+}
+.work-expiriennce-company{
+color: #000;
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+margin-top: 0;
+margin-bottom: 12px;   
+}
+.company-name{
+color: #6d9bf5;
+}
+.work-expiriennce-period{
+color: #a8a8a8;
+font-size: 12px;
+font-weight: 400;
+line-height: 15px;
+margin-bottom: 8px;
+}
+.separator{
+color: #000;
+}
+.work-expiriennce-duties-list{
+padding-left: 16px;
+}
+.work-expiriennce-duties-items{
+color: #595959;
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+line-height: 24px;
+}
+.work-expiriennce-konteiner{
+    margin-bottom: 12px;
+}
