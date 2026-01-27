@@ -198,6 +198,30 @@ font-weight: 400;
 font-style: normal;
 line-height: 24px;
 }
+.Education-expiriennce-duties-items{
+   color: #595959;
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+line-height: 24px; 
+}
 .work-expiriennce-konteiner{
     margin-bottom: 12px;
+}
+.navchannya{
+  border-bottom: 2px solid #000;
+  padding-bottom: 6px;
+}
+
+.summary {
+  max-width: 700px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #4f4f4f;
+  margin: 14px 0 30px;
+}
+
+.summary strong {
+  font-weight: 600;
+  color: #222;
 }
