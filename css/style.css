@@ -225,3 +225,47 @@ line-height: 24px;
   font-weight: 600;
   color: #222;
 }
+.project-card {
+  background: #f8f9fb;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-top: 12px;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.project-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.project-list {
+  padding-left: 18px;
+}
+
+.project-list li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.project-list a {
+  color: #6a5acd;
+  text-decoration: none;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
+
+.project-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+  font-style: italic;
+}
