@@ -1,0 +1,347 @@
+{
+  "info": {
+    "_postman_id": "64c02292-03e8-4ddf-bb4b-2d9ee1ccfb93",
+    "name": "QA Auto",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51868031",
+    "_collection_link": "https://go.postman.co/collection/51868031-64c02292-03e8-4ddf-bb4b-2d9ee1ccfb93?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "New Profile",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"{{$randomFirstName}}\",\r\n    \"lastName\": \"{{$randomLastName}}\",\r\n    \"email\": \"{{$randomExampleEmail}}\",\r\n    \"password\": \"Qwerty12345\",\r\n    \"repeatPassword\": \"Qwerty12345\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qauto.forstudy.space/api/auth/signup",
+          "protocol": "https",
+          "host": [
+            "qauto",
+            "forstudy",
+            "space"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Edit name and lastaneme",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"photo\": \"user-1621352948859.jpg\",\r\n\"name\": \"{{$randomFirstName}}\",\r\n  \"lastName\": \"{{$randomLastName}}\",\r\n  \"dateBirth\": \"2021-03-17T15:21:05.000Z\",\r\n  \"country\": \"Ukraine\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qauto.forstudy.space/api/users/profile",
+          "protocol": "https",
+          "host": [
+            "qauto",
+            "forstudy",
+            "space"
+          ],
+          "path": [
+            "api",
+            "users",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Edit distanceUnits",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"currency\": \"usd\",\r\n  \"distanceUnits\": \"ml\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qauto.forstudy.space/api/users/settings",
+          "protocol": "https",
+          "host": [
+            "qauto",
+            "forstudy",
+            "space"
+          ],
+          "path": [
+            "api",
+            "users",
+            "settings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Car",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const response = pm.response .json()\r",
+              "\r",
+              "\r",
+              "pm.globals.set(\"carid\", response.data.id);\r",
+              "\r",
+              "\r",
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"carBrandId\": 1,\r\n    \"carModelId\": 1,\r\n    \"mileage\": 99\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qauto.forstudy.space/api/cars",
+          "protocol": "https",
+          "host": [
+            "qauto",
+            "forstudy",
+            "space"
+          ],
+          "path": [
+            "api",
+            "cars"
+          ],
+          "query": [
+            {
+              "key": "Date",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Edits existing car",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"carBrandId\": 1,\r\n  \"carModelId\": 1,\r\n  \"mileage\": 112\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qauto.forstudy.space/api/cars/{{carid}}\n",
+          "protocol": "https",
+          "host": [
+            "qauto",
+            "forstudy",
+            "space"
+          ],
+          "path": [
+            "api",
+            "cars",
+            "{{carid}}\n"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Creates expenses",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"carId\": \"{{carid}}\",\r\n    \"reportedAt\": \"2026-02-09\",\r\n    \"mileage\": 111,\r\n    \"liters\": 11,\r\n    \"totalCost\": 11,\r\n    \"forceMileage\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qauto.forstudy.space/api/expenses",
+          "protocol": "https",
+          "host": [
+            "qauto",
+            "forstudy",
+            "space"
+          ],
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Car",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qauto.forstudy.space/api/cars/{{carid}}",
+          "protocol": "https",
+          "host": [
+            "qauto",
+            "forstudy",
+            "space"
+          ],
+          "path": [
+            "api",
+            "cars",
+            "{{carid}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Profile",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://qauto.forstudy.space/api/users",
+          "protocol": "https",
+          "host": [
+            "qauto",
+            "forstudy",
+            "space"
+          ],
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "prev_case_date",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
